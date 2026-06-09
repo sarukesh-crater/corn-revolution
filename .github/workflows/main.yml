@@ -27,7 +27,9 @@ jobs:
           node-version: 22
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install framer-motion three @react-three/fiber @react-three/drei
 
       - name: Build
         run: npm run build
@@ -46,4 +48,3 @@ jobs:
     steps:
       - name: Deploy
         uses: actions/deploy-pages@v4
-
